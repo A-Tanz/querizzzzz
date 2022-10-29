@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+
+<div class="jumbotron  clr">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form class="" action="/compose" method="post">
+      <div class="form-group">
+        <label for="">Email</label>
+        <input class="form-control" type="text" name="email" required>
+        <label for="" >Name</label>
+        <input class="form-control" type="text" name="name" required>
+        <label for="" >Subject</label>
+        <input class="form-control" type="text" name="subject" required>
+        <label for="" >Message</label>
+        <textarea class="form-control" name="message" rows="5" cols="30" required></textarea>
+        <label for="" >Query</label>
+        <input class="form-control" type="text" name="query" required>
+      </div>
+      <br />
+      <button class="btn btn-primary" type="submit" name="button">Submit</button>
+    </form>
+    <br>
+    <a href="/">
+      <button class="btn btn-primary" >GoBack</button>
+      </a>
+</div>
+</div>
+
+<%- include("partials/footer"); -%>

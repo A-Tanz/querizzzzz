@@ -1,0 +1,23 @@
+.centered {
+  padding-top: 200px;
+  text-align: center;
+}
+.centeredh {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.card-link{
+  color: grey;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: inherit;
+  color: black;
+  border: 2px solid white;
+  border-radius: 1rem;
+}

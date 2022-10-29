@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+<div class="jumbotron centeredh clr">
+  <div class="container">
+  <h1>Latest Queries</h1>
+  <br><br>
+  <div class="row">
+  <% posts.forEach(function(post){ %>
+    <div class="col col-lg-4 col-sm-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%=post.name%></h5>
+        <p class="card-text">
+          <% if(post.subject.length<=60) {%>
+            <% for(let i = 0;i<=post.subject.length;i+=20){%>
+              <%=post.subject.substring(i,i+19)%>
+          <%}} else { %>
+            <% for(let i = 0;i<=60;i+=20){%>
+              <%=post.subject.substring(i,i+19)%>
+          <% }%>...
+        <% }%>
+        </p>
+        <a href="/posts/<%=post._id%>" class="card-link">Read More..</a>
+        <br />
+        <a href="#" class="card-link"><i class="fa fa-heart"></i></a>
+        <a href="#" class="card-link"><i class="fa fa-comment"></i></a>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+  </div>
+  <a href="/"><button class="btn btn-primary">GoBack</button></a>
+  </div>
+  </div>
+<%- include("partials/footer"); -%>
